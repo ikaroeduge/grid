@@ -1,0 +1,19 @@
+html {
+    background: rgb(247, 250, 248);
+}
+
+body {
+    background-color: aquamarine;
+    height: 100vh;
+    margin: 30px;
+    padding: 50px;
+}
+div {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: blueviolet;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 48px;
+    color: white;
+}
