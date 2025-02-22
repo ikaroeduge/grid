@@ -1,19 +1,81 @@
-html {
-    background: rgb(247, 250, 248);
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
-body {
-    background-color: aquamarine;
-    height: 100vh;
-    margin: 30px;
-    padding: 50px;
+.flag {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border: 5px solid black;
+    position: relative;
 }
-div {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: blueviolet;
-    height: 100vh;
-    line-height: 100vh;
-    text-align: center;
-    font-size: 48px;
-    color: white;
+
+/* დიდი ცენტრალური ჯვარი */
+.big-cross {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.big-cross::before,
+.big-cross::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+}
+
+/* ჰორიზონტალური ზოლი */
+.big-cross::before {
+    width: 180px;
+    height: 30px;
+    left: -90px;
+    top: -15px;
+}
+
+/* ვერტიკალური ზოლი */
+.big-cross::after {
+    width: 30px;
+    height: 180px;
+    left: -15px;
+    top: -90px;
+}
+
+/* ოთხი პატარა ჯვარი */
+.small-cross {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.small-cross::before,
+.small-cross::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+}
+
+.small-cross::before {
+    width: 10px;
+    height: 30px;
+}
+
+.small-cross::after {
+    width: 30px;
+    height: 10px;
+}
+
+.top-left { grid-row: 1; grid-column: 1; }
+.top-right { grid-row: 1; grid-column: 3; }
+.bottom-left { grid-row: 3; grid-column: 1; }
+.bottom-right { grid-row: 3; grid-column: 3; }
